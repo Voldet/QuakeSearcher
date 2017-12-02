@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="720.0" spacing="8.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="432.0" promptText="search" translateX="-100.0" translateY="-24.0">
+         <font>
+            <Font name="Candara Italic" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Blend />
+         </effect>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="632.0" text="Label" translateY="-4.0" />
+      <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="112.0" prefWidth="632.0">
+        <columns>
+          <TableColumn prefWidth="78.0" text="date and time" />
+          <TableColumn minWidth="7.0" text="latitude/longitude" />
+            <TableColumn prefWidth="79.0" text="magnitude" />
+            <TableColumn prefWidth="79.0" text="depth" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+            <TableColumn prefWidth="75.0" text="Column X" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
