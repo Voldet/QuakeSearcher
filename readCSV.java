@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class readCSV{
-	private static ArrayList<String> readCSVFile(String filePath){
+	public static ArrayList<String> readCSVFile(String filePath){
 	File csv = new File(filePath);  // CSV文件路径
     BufferedReader br = null;
     try
