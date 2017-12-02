@@ -8,6 +8,17 @@ public class QuakeInfo {
 	private String depth;
 	private String magnitude;
 	private String region;
+	public  QuakeInfo(String id,String UTC_date,String latitude
+			,String longitude,String depth,String magnitude,String region){
+		//用于获取和创建新的地震数据
+		this.id = id;
+		this.UTC_date = UTC_date;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.depth = depth;
+		this.magnitude = magnitude;
+		this.region = region;
+	}
 	public String getId() {
 		return id;
 	}
@@ -50,15 +61,5 @@ public class QuakeInfo {
 	public void setRegion(String region) {
 		this.region = region;
 	}
-	public  QuakeInfo(String id,String UTC_date,String latitude
-			,String longitude,String depth,String magnitude,String region){
-		//用于获取和创建新的地震数据
-		this.id = id;
-		this.UTC_date = UTC_date;
-		this.latitude = latitude;
-		this.longitude = longitude;
-		this.depth = depth;
-		this.magnitude = magnitude;
-		this.region = region;
-	}
+	
 }
