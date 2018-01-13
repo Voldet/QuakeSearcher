@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#initUnits" prefHeight="901.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UnitController">
+	<children>
+      <Pane prefHeight="251.0" prefWidth="960.0" style="-fx-background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514023509989&amp;di=4a0af3779269652ae63290b18f893856&amp;imgtype=0&amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F6c224f4a20a4462306f8b2ab9222720e0df3d7cc.jpg);">
+         <children>
+            <Pane layoutX="50.0" layoutY="-11.0" prefHeight="273.0" prefWidth="779.0">
+               <children>
+                  <GridPane hgap="5.0" layoutY="52.0" prefHeight="181.0" prefWidth="678.0" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="71.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="156.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="171.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <Label text="Max Magnitude" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Region" textFill="#ebebeb" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label lineSpacing="50.0" prefHeight="27.0" prefWidth="64.0" text="Date" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dateFromDatePicker" prefHeight="30.0" prefWidth="147.0" promptText="2016-01-01" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="dateToDatePicker" prefHeight="30.0" prefWidth="147.0" promptText="2017-12-31" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="From" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="#414f45" />
+                                    <Stop color="#946e6e" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label text="To" textFill="#ebebeb" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="regionPicker" prefHeight="30.0" prefWidth="147.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Slider fx:id="magnitudeMaxSd" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" onMouseDragExited="#search" onMouseDragged="#search" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <effect>
+                              <Bloom threshold="0.86" />
+                           </effect></Slider>
+                     </children>
+                  </GridPane>
+            		<Button alignment="CENTER" defaultButton="true" layoutX="684.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#search" prefHeight="37.0" prefWidth="123.0" text="Search" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#1fc4a9" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="390.0" layoutY="28.0" prefHeight="47.0" prefWidth="302.0" text="Vold Quake Searcher">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <textFill>
+                        <RadialGradient centerX="0.43333333333333335" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#394021" />
+                              <Stop color="#865d5d" offset="0.9925093632958801" />
+                              <Stop color="#865d5d" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </textFill>
+                  </Label>
+                  <Button alignment="CENTER" defaultButton="true" layoutX="684.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#listQuake" prefHeight="47.0" prefWidth="123.0" text="List" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#1fc4a9" />
+                     </effect>
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="582.0" layoutY="242.0" text="Please first drag the Max Magnitude slider then click the button" textFill="#ffffffbf" />
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </Pane>
+            <Pane layoutX="910.0" layoutY="99.0" prefHeight="105.0" prefWidth="245.0">
+               <children>
+                  <ToggleButton layoutX="67.0" layoutY="37.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="92.0" text="Database" textFill="#203739">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="source" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <Label layoutX="29.0" layoutY="14.0" text="Click below to choose source" textFill="#000000bf" />
+               </children>
+            </Pane>
+            <Label layoutX="941.0" layoutY="37.0" text="Click below to see web crawler" textFill="#9e5757bf" />
+            <Button layoutX="975.0" layoutY="62.0" mnemonicParsing="false" onMouseClicked="#creep" prefHeight="37.0" prefWidth="92.0" text="Live Update" />
+         </children>
+      </Pane>
+      <TabPane prefHeight="640.0" prefWidth="1127.0" style="-fx-background-color: #DDDDDD;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="TableView">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                  		<TableView fx:id="table" layoutX="9.0" prefHeight="594.0" prefWidth="1114.0" style="-fx-background-color: #aaaaaa;">
+                  			<columns>
+                              <TableColumn fx:id="idColumn" prefWidth="86.0" text="Id" />
+                  				<TableColumn fx:id="dateColumn" prefWidth="211.0" text="UTC_date" />
+                  				<TableColumn fx:id="latitudeColumn" prefWidth="120.0" text="Latitude" />
+                  				<TableColumn fx:id="longitudeColumn" prefWidth="108.0" text="Longitude" />
+                  				<TableColumn fx:id="depthColumn" prefWidth="82.0" text="Depth" />
+                  				<TableColumn fx:id="magnitudeColumn" prefWidth="90.0" text="Magnitude" />
+                  				<TableColumn fx:id="regionColumn" prefWidth="406.0" text="Region" />
+                  			</columns>
+                  		</TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Mercator Map">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="1127.0" style="-fx-background-color: #aaaaaa;">
+                     <children>
+                        <VBox layoutX="114.0" layoutY="14.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <StackPane fx:id="Mercator" prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../bin/styleSheet/Mercator.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Eckert_IV Map">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="1127.0" style="-fx-background-color: #aaaaaa;">
+                     <children>
+                        <VBox layoutX="63.0" layoutY="41.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <StackPane fx:id="Eckert" prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="502.0" fitWidth="1001.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../bin/styleSheet/Eckert_IV.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+	</children>
+</VBox>
